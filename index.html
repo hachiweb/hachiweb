@@ -1,0 +1,151 @@
+<?php
+	$link = mysqli_connect("shareddb1e.hosting.stackcp.net","eventmanagement-3233726a","pratik0001","eventmanagement-3233726a");
+	if(mysqli_connect_error())
+	{
+		die("There is some error in connecting to database");
+	}
+	
+	$registrar = $_POST['registrar'];
+	$eventname = $_POST['event-name'];
+	$location = $_POST['location'];
+	$date = $_POST['event-date'];
+	$query = "INSERT INTO `eventreg`(`registrar`,`eventname`,`location`,`date`) VALUES('$registrar','$eventname','$location','$date')";
+	if(!mysqli_query($link,$query))
+		echo mysqli_errno($link);
+	mysqli_close($link);
+?>
+
+<html>
+	<head>
+		<title>
+			Event Website
+		</title>
+		<style>
+			p{
+				padding:1px;
+			}
+			.topnav{
+				width:100%;
+				height:90px;
+				border: 1.2px solid black;
+				color:white;
+				background-color: green;
+				font-size:20px;
+				text-align:center;
+				posistion:fixed;
+					}
+			.clear{
+				clear:both;
+				}
+			#left-panel{
+				float:left;
+				width:20%;
+				height:500px;
+				border: 1.2px solid black;
+				background-color:#732b87;
+				color:white;
+				text-align:center;
+			}
+			#main{
+				float:left;
+				width:59.5%;
+				height:500px;
+				border: 1.2px solid black;
+				background-color:#68872b;
+				text-align:center;
+			}
+			#right-panel{
+				float:left;
+				width:20%;
+				height:500px;
+				border: 1.2px solid black;
+				background-color:#732b87;
+				color:white;
+				text-align:center;
+			}
+			#footer{
+				
+				border: 1.2px solid black;
+				width:100%;
+				height:70px;
+				background-color:#3f9b42;
+				font-size:16px;
+				text-align:center;
+				color:white;
+			}
+			.boxes
+			{
+				height:25%;
+				width:25%;
+				border:1px solid #7e10ed;
+				border-top-left-radius:10%;
+				border-bottom-right-radius:10%;
+				margin:10px;
+				float:left;
+			}
+			#box-container
+			{
+			margin-left:90px;
+			}
+			input{
+			border-radius:6px;
+			height:30px;
+			}
+			#reg{
+			margin-left:2px;
+			border:1px solid white;
+			width:260px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="topnav">
+			<p>Event Website</p>
+			<marquee style="color:red">Registrations Open</marquee>
+		</div>
+		<div id="left-panel">
+			<p>Event Registration</p>
+			<form action="thanks.html" method="post">			
+			<table id="reg">
+			<tr><td><label>Registrar:</label></td><td><input type="text" name="registrar"></td></tr>
+			<tr><td><label>Event name:</label></td><td><input type="text" name="event-name"></td></tr>
+			<tr><td><label>Location:</label></td><td><input type="text" name="location"></td></tr>
+			<tr><td><label>Date:</label></td><td><input type="date" name="event-date"></td></tr>
+			<tr><td></td><td><input type="submit" style="color:white;background-color:purple;margin-top:10px;font-size:16px;" value="Register"></td></tr>
+			</table>
+			</form>
+			
+		</div>
+		<div id="main">
+		 <p style="font-weight:bold;font-size:17px;"> Upcoming Events </p>
+		 <div id="box-container">
+		  <div class="boxes" id="box1"></div>
+		  <div class="boxes" id="box2"></div>
+		  <div class="boxes" id="box3"></div>
+		  <div class="boxes" id="box4"></div>
+		  <div class="boxes" id="box5"></div>
+		  <div class="boxes" id="box6"></div>
+		  <div class="boxes" id="box7"></div>
+		  <div class="boxes" id="box8"></div>
+		  <div class="boxes" id="box9"></div>
+		 </div> 
+		</div>
+		<div id="right-panel">
+			<p>Event-Pass Registration</p>
+			<form action="thanks.html" method="post">			
+			<table id="reg">
+			<tr><td><label>Name:</label></td><td><input type="text" name="name"></td></tr>
+			<tr><td><label>Event name:</label></td><td><input type="text" name="event-name"></td></tr>
+			<tr><td><label>No of passes:</label></td><td><input type="text" name="passno"></td></tr>
+			<tr><td><label>Contact No:</label></td><td><input type="date" name="event-date"></td></tr>
+			<tr><td></td><td><input type="submit" style="color:white;background-color:purple;margin-top:10px;font-size:16px;" value="Apply"></td></tr>
+			</table>
+			</form>
+		</div>
+		<div class="clear" id="footer"> 
+			<p>&copy www.hachiweb.com &trade; <br>
+		&reg All rights reserved 2017</p>
+		</div>
+</body>
+</html>		

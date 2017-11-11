@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Sign Up to manage events</title>
+  
+  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
+		rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" 
+		crossorigin="anonymous">
+		<script src="https://use.fontawesome.com/8554f4b109.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" 
+		integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" 
+		crossorigin="anonymous"></script>
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<script  src="js/index.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="cotn_principal">
+<div class="cont_centrar">
+
+  <div class="cont_login">
+<div class="cont_info_log_sign_up">
+      <div class="col_md_login">
+<div class="cont_ba_opcitiy">
+        
+        <h2>LOGIN</h2>  
+  <p>Login to manage your event passes</p> 
+  <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+  </div>
+  </div>
+<div class="col_md_sign_up">
+<div class="cont_ba_opcitiy">
+  <h2>SIGN UP</h2>
+
+  
+  <p>Register to manage your account and event passes</p>
+
+  <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+</div>
+  </div>
+       </div>
+
+    
+    <div class="cont_back_info">
+       <div class="cont_img_back_grey">
+       <img src="images/loginbg.jpg" alt="" />
+       </div>
+       
+    </div>
+<div class="cont_forms" >
+    <div class="cont_img_back_">
+       <img src="images/loginbg.jpg" alt="" />
+       </div>
+<form action="login.php" name="login" method = "POST">
+ <div class="cont_form_login">
+<a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+    <h2>LOGIN</h2>
+ <input type="text" placeholder="Name" name="name" />
+<input type="password" placeholder="Contact No" name="contact"/>
+<input type="submit" class="btn_login" onclick="cambiar_login()" style="margin-top:3px;text-align:center;color:white;box-shadow:5px 5px 5px 2.5px #888888;" value="Login"/>
+  </div>
+  </form>
+  <form action="regred.php" name="register" method="POST" onsubmit="return validateForm()">
+   <div class="cont_form_sign_up">
+<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+     <h2>REGISTER</h2>
+<input type="text" placeholder="Name" name="name"/>
+<input type="text" placeholder="Contact No" name="contact" />
+<input type="password" placeholder="Password" name="password"/>
+<input type="password" placeholder="Confirm Password" name="cpassword"/>
+<input type="submit" class="btn_sign_up" onclick="cambiar_sign_up()" style="margin-top:1px;text-align:center;color:white;box-shadow:5px 5px 5px 2.5px #888888;" value="Register"/>
+
+  </div>
+</form>
+    </div>
+    
+  </div>
+ </div>
+</div>
+  
+    <script  src="js/index.js"></script>
+<script type="javascript">
+function validateForm(){
+var pass = document.register.password.value;
+var cpass = document.register.cpassword.value;
+if(pass!=cpass)
+	{
+	alert("Passwords do not match");
+     }
+}
+</script>
+
+</body>
+</html>

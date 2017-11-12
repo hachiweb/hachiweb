@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background:url("images/searchbg.jpg");
+}
+#search{
+margin-left:385px;
+margin-top:250px;
+}
+#search-box{
+margin-top:10px;
+margin-left:70px;
+border: 2px solid purple;
+height:70px;
+width:400px;
+border-radius:16px;
+text-align:center;
+background:none;
+font-size:22px;
+color:purple;
+-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.5s ease-in;
+	box-shadow:1px 5px 6px gray;
+}
+#search-box:focus{
+width:450px;
+}
+
+</style>
+</head>
+<body>
+<div id="search">
+<form action="search.php" method="POST">
+<input id="search-box"type"text" name="search" placeholder="Search the events" />
+<input type="submit" value='      .' style="background:url('images/search.png');background-repeat:no-repeat;width:50x;height:50px;"/>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your feedback is valuable to us!</title>
+<style>
+body{
+background: url("images/fbbg.jpg");
+background-repeat:no-repeat;
+height:626px;
+}
+#feedback{
+border: 2px solid white;
+border-radius:8px;
+width:500px;
+height:500px;
+margin-left:25%;
+margin-top:2%;
+}
+#feedback input{
+margin-top:10px;
+margin-left:70px;
+border: 2px solid purple;
+height:50px;
+width:350px;
+border-radius:16px;
+text-align:center;
+background:none;
+font-size:22px;
+color:purple;
+-webkit-transition: all 0.7s ease-in;
+	-moz-transition: all 0.71s ease-in;
+	-o-transition: all 0.7s ease-in;
+	transition: all 0.7s ease-in;
+	box-shadow:1px 5px 6px gray;
+}
+#feedback textarea{
+margin-top:10px;
+margin-left:70px;
+border: 2px solid purple;
+height:200px;
+width:350px;
+border-radius:16px;
+text-align:center;
+background:none;
+font-size:22px;
+color:purple;
+font-weight:bold;
+-webkit-transition: all 0.7s ease-in;
+	-moz-transition: all 0.71s ease-in;
+	-o-transition: all 0.7s ease-in;
+	transition: all 0.7s ease-in;
+	box-shadow:1px 5px 6px gray;
+}
+#feedback input:focus{
+width:370px;
+}
+#feedback textarea:focus{
+width:370px;
+}
+#footer{
+text-align:center;
+font-size:18px;
+color:#4F1F59;
+}
+</style>
+</head>
+<body>
+<div id="feedback">
+<form action="feedbackprocess.php" method="POST">
+<input type="text" placeholder="Your name" name="name" />
+<input type="text" placeholder="Your Email Address" name="email" /></br>
+<input type="text" placeholder="Your Contact No" name="contact" /></br>
+<textarea rows="6" cols="35" name="feedback" placeholder="Your feedback"></textarea>
+<input type="submit" style="width:265px;margin-left:155px; margin-top:20px;" value="Submit feedback" />
+</div>
+<div id="footer">
+</br><p>&copy www.hachiweb.com &trade; <br>
+		&reg All rights reserved 2017</p>
+</div>
+</body>
+</html>
